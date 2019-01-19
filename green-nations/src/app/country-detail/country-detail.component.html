@@ -1,0 +1,8 @@
+<fw-dynamic-form
+    [vm]="country"
+    [vmDefinition]="countryDefinition"
+    [operation]="operation"
+    [errorMessage]="errorMessage"
+    (update)="updateCountry($event)"
+    (create)="createCountry($event)">
+</fw-dynamic-form>

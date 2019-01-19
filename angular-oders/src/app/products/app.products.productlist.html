@@ -1,0 +1,76 @@
+<div id="fullPage">
+    <table>
+        <tr>
+            <td>
+                <div id="Header">
+                    <h1>Header section</h1>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="body">
+                    <table>
+                        <tr>
+                            <td style="width:20%">
+                                <div id="left-body">
+                                    <h1>Left body section</h1>
+                                </div>
+                            </td>
+
+                            <td style="width:60%">
+                                <div id="main-body">
+                                    <table id="productsTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Image</th>
+                                                <th>Product Id</th>
+                                                <th>Product Name</th>
+                                                <th>ProductCode</th>
+                                                <th>Release Date</th>
+                                                <th>Price</th>
+                                                <th>Description</th>
+                                                <th>Rating</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor='let product of products'>
+                                                <td *ngIf='showImage'>
+                                                    <div id="productImage" class="animated">
+                                                        <img [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+                                                    </div>
+                                                </td>
+                                                <td>{{product.productId}}</td>
+                                                <td>{{product.productName}}</td>
+                                                <td>{{product.productCode}}</td>
+                                                <td>{{product.releaseDate}}</td>
+                                                <td>{{product.price}}</td>
+                                                <td>{{product.description}}</td>
+                                                <td>{{product.rating}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+
+                            <td style="width:20%">
+                                <div id="right-body">
+                                    <h1>Right body section</h1>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="footer"> 
+                    <h1>Footer section</h1>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

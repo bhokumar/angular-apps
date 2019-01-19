@@ -1,0 +1,108 @@
+/************************** Full Page CSSS **********************************/
+
+#fullPage{
+    background-color: #0bc770;
+}
+
+/************************** Header CSSS **********************************/
+#Header{
+    text-align: center;
+}
+
+/************************** Products Table CSSS **********************************/
+#productsTable th {
+    border: 1px solid  black;
+}
+
+#productsTable td {
+    border: 1px solid  black;
+}
+
+#productsTable {
+    border: 1px solid  black;
+    border-bottom: 10px solid black;
+    border-right: 10px solid black;
+}
+
+#productsTable tr:nth-child(even) {background-color: #c2c2c2;} 
+
+#productsTable tr:hover {background-color: #a2a2a2;}
+
+
+/************************** Footer Table CSSS **********************************/
+#footer{
+    text-align: center;
+}
+
+#productImage{
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+
+.animated{
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+}
+
+@keyframes fadeIn{
+    0% { 
+        opacity: 0; 
+        -webkit-transform: perspective(400px) rotateX(90deg); 
+    }
+    100% { 
+        opacity: 1;
+        -webkit-transform: perspective(400px) rotateX(-30deg); 
+    }
+}
+
+@-webkit-keyframes fadeIn{ 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: perspective(400px) rotateX(90deg); 
+    }
+    100% { 
+        opacity: 1;
+        -webkit-transform: perspective(400px) rotateX(-30deg); 
+    }
+}
+
+
+/******************************************** Fade out ******************************/
+
+#productImage:hover{
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    animation-name: fadeOut;
+    -webkit-animation-name: fadeOut;
+}
+
+
+@keyframes fadeOut{
+    0% { 
+        opacity: 0; 
+        -webkit-transform: perspective(400px) rotateX(-30deg); 
+    }
+    100% { 
+        opacity: 1;
+        -webkit-transform: perspective(400px) rotateX(90deg); 
+    }
+}
+
+@-webkit-keyframes fadeOut{ 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: perspective(400px) rotateX(-30deg); 
+    }
+    100% { 
+        opacity: 1;
+        -webkit-transform: perspective(400px) rotateX(90deg); 
+    }
+}
