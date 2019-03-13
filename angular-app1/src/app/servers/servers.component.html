@@ -1,3 +1,16 @@
-<p>
-  servers works!
+<p *ngIf="serverCreated" else noServer [ngStyle]="{backgroundColor: getColor()}">
+  this server with name {{serverName}} with Server Id {{serverId}} is {{getServerStatus()}}
 </p>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<button 
+  class="btn btn-primary" 
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+    Add Server
+  </button>
+<ng-template #noServer>
+  No Server Created Yet
+</ng-template>
+<p [ngStyle]="{backgroundColor: getColor()}">Satatus: {{serverCreationStatus}}</p>
