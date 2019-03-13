@@ -1,3 +1,6 @@
-p {
-    color: #216619;
+p { 
+    color: #219619;
+    padding: 20px;
+    background-color: palegreen;
+    border: 1px solidg green;
 }
